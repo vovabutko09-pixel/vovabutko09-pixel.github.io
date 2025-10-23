@@ -61,7 +61,12 @@
             background: var(--tg-theme-secondary-bg-color);
         }
 
-         button1{
+        #form {
+            display: none;
+            text-align: center;
+        }
+
+        button1{
             border: 0;
             border-radius: 5px;
             margin-top: 50px;
@@ -73,16 +78,11 @@
             transition: all 500ms ease;
             color: var(--tg-theme-button-color);
             background: var(--tg-theme-button-text-color);
-        }
-
-        #form {
-            display: none;
-            text-align: center;
-        }
-
+        }      
         button1:hover{
             background: var(--tg-theme-secondary-bg-color);
         }
+        
         button2{
             border: 0;
             border-radius: 5px;
@@ -96,8 +96,46 @@
             color: var(--tg-theme-button-color);
             background: var(--tg-theme-button-text-color);
         }
-
         button2:hover{
+            background: var(--tg-theme-secondary-bg-color);
+        } 
+
+        #lessonsEGE{
+            display: none;
+            text-align: center;
+        }
+
+        button_Rus{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            front-size: 20px;
+            front-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }  
+        button_Rus:hover{
+            background: var(--tg-theme-secondary-bg-color);
+        }
+        
+        button_MatB{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            front-size: 20px;
+            front-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+        button_MatB:hover{
             background: var(--tg-theme-secondary-bg-color);
         } 
         
@@ -115,6 +153,12 @@
         <button1 id="EGE">ЕГЭ</button1>
         <button2 id="OGE">ОГЭ</button2>
     </form>
+    <lessonsEGE id='lessonsEGE'>
+        <h1>Выбор предмета</h1>
+        <button_Rus id='russian'>Русский язык</button_Rus>
+        <button_MatB id='math_b'>Метаематика(Базовый ур)</button_MatB>
+        <button_Mat id='math'>Метаематика(Профильный ур)</button_Mat>
+    </lessonsEGE>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
         let tg = window.Telegram.WebApp;
@@ -127,14 +171,14 @@
             document.getElementById('form').style.display = 'block';
         });
 
+        EGE.addEventListener('click', () => {
+            document.getElementById('form').style.display = 'none';
+            document.getElementById('lessonsEGE').style.display = 'block';
+        });
+        
         order.addEventListener('click', () => {
             tg.close();
         });
     </script>
 </body>
 </html>
-
-
-
-
-
