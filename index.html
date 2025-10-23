@@ -72,7 +72,7 @@
             margin-top: 50px;
             height: 60px;
             width: 200px;
-            front-size: 20px;
+            front-size: 100px;
             front-weight: 500;
             cursor: pointer;
             transition: all 500ms ease;
@@ -89,7 +89,7 @@
             margin-top: 50px;
             height: 60px;
             width: 200px;
-            front-size: 20px;
+            front-size: 100px;
             front-weight: 500;
             cursor: pointer;
             transition: all 500ms ease;
@@ -138,6 +138,23 @@
         button_MatB:hover{
             background: var(--tg-theme-secondary-bg-color);
         } 
+
+        button_Mat{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            front-size: 20px;
+            front-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+        button_Mat:hover{
+            background: var(--tg-theme-secondary-bg-color);
+        } 
         
     </style>
 </head>
@@ -157,7 +174,7 @@
         <h1>Выбор предмета</h1>
         <button_Rus id='russian'>Русский язык</button_Rus>
         <button_MatB id='math_b'>Метаематика(Базовый ур)</button_MatB>
-        <button_Mat id='math'>Метаематика(Профильный ур)</button_Mat>
+        <button_Mat id='math'>Метаематика(Проф ур)</button_Mat>
     </lessonsEGE>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
@@ -182,3 +199,4 @@
     </script>
 </body>
 </html>
+
