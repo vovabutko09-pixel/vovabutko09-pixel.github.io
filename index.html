@@ -80,12 +80,16 @@
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        let ЕГЭ = document.getElementById('ЕГЭ');
-        let ОГЭ = document.getElementById('ОГЭ');
+        let EGE = document.getElementById('ЕГЭ');
+        let OGE = document.getElementById('ОГЭ');
 
-        ЕГЭ.addEventListener('click', () =>{
+        EGE.addEventListener('click', () =>{
             document.getElementById('main').style.display = 'none';
             document.getElementById('form').style.display = 'block';
+        })
+
+        order.addEventListener('click', () =>{
+            tg.close();
         })
     </script>
 </body>
