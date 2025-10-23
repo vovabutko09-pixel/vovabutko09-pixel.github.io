@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Карманный репетитор🥸</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: #f5cfa4;
+            background:
+                linear-gradient(rgba(59, 57, 57, 0.5), rgba(59, 57, 57, 0.5)),
+                url('https://vovabutko09-pixel.github.io/7b2eeff8-70f7-4a6e-b43d-936615c014b6.png');
+            background-repeat: repeat;
+            background-size: 50% 50%
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .elegant-shape-h1 {
+            width: fit-content;
+            margin: 20px auto;
+            padding: 25px 25px;
+            background: linear-gradient(135deg, rgba(125, 29, 33, 0.9), rgba(182, 108, 69, 0.9));
+            color: #f5cfa4;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 35px;
+            font-weight: 500;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 2px solid #f3ca6a;
+        }
+
+
+        img{
+            width: 140px;
+            margin: 30px auto;
+        }
+
+        p {
+            width: 250px;
+            margin: 0 auto;
+        }
+        .elegant-shape {
+            width: fit-content;
+            margin: 20px auto;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, rgba(125, 29, 33, 0.9), rgba(182, 108, 69, 0.9));
+            color: #f5cfa4;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 2px solid #f3ca6a;
+        }
+
+        button{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 140px;
+            width: 340px;
+            font-size: 90px;
+            font-weight: 500;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+        }
+        button:hover{
+            background-position: 100% 0;
+        }
+
+        #form {
+            display: none;
+            text-align: center;
+        }
+
+        button1{
+            top: 50px;
+            border: 0;
+            border-radius: 25px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+            width: 300px;
+            font-size: 100px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+        }
+        button1:hover{
+            background-position: 100% 0;
+        }
+
+        button2{
+            top: 300px;
+            border: 0;
+            border-radius: 25px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+            width: 300px;
+            font-size: 100px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+        }
+        button2:hover{
+            background-position: 100% 0;
+        }
+
+        #lessonsEGE{
+            display: none;
+            text-align: center;
+        }
+
+        button_Rus{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Rus:hover{
+            background-position: 100% 0;
+        }
+
+        button_Mat{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Mat:hover{
+            background-position: 100% 0;
+        }
+
+        button_Phis{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Phis:hover{
+            background-position: 100% 0;
+        }
+
+        button_Chem{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Chem:hover{
+            background-position: 100% 0;
+        }
+
+        button_Bio{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Bio:hover{
+            background-position: 100% 0;
+        }
+
+        button_Hist{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Hist:hover{
+            background-position: 100% 0;
+        }
+
+        button_Geo{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Geo:hover{
+            background-position: 100% 0;
+        }
+
+        button_Eng{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Eng:hover{
+            background-position: 100% 0;
+        }
+
+        button_Det{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Det:hover{
+            background-position: 100% 0;
+        }
+
+        button_Franch{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Franch:hover{
+            background-position: 100% 0;
+        }
+
+        button_Soc{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Soc:hover{
+            background-position: 100% 0;
+        }
+
+        button_Spain{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Spain:hover{
+            background-position: 100% 0;
+        }
+
+        button_China{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_China:hover{
+            background-position: 100% 0;
+        }
+
+        button_Lit{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Lit:hover{
+            background-position: 100% 0;
+        }
+
+        button_MatB{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_MatB:hover{
+            background-position: 100% 0;
+        }
+
+        button_Inf{
+            border: 0;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 200;
+            width: 350px;
+            font-size: 45px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: #fff;
+            background: linear-gradient(to right, #7d1d21, #b66c45, #f3ca6a);
+            background-size: 200% 100%;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
+        }
+        button_Inf:hover{
+            background-position: 100% 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <h1 class='elegant-shape-h1'>Подготовка к ЕГЭ и ОГЭ</h1>
+        <img src="https://vovabutko09-pixel.github.io/photo_2025-10-23_09-00-56.png">
+        <p class='elegant-shape'>Начни сейчас, завтра будет поздно!</p>
+        <button id="start">Начать</button>
+    </div>
+    <form id='form'>
+        <h1>Выбор экзамена</h1>
+        <button1 id="OGE">ОГЭ</button1>
+        <button2 id="EGE">ЕГЭ</button2>
+    </form>
+    <lessonsEGE id='lessonsEGE'>
+        <h1>Выбор предмета</h1>
+        <button_Rus id='russian'>Русский язык</button_Rus>
+        <button_Mat id='math'>Математика (профиль)</button_Mat>
+        <button_Phis id='phis'>Физика</button_Phis>
+        <button_Chem id='chem'>Химия</button_Chem>
+        <button_Bio id='bio'>Биология</button_Bio>
+        <button_Hist id='hist'>История</button_Hist>
+        <button_Geo id='geo'>География</button_Geo>
+        <button_Eng id='eng'>Английский язык</button_Eng>
+        <button_Det id='detuch'>Немецкий язык</button_Det>
+        <button_Franch id='franch'>Французский язык</button_Franch>
+        <button_Soc id='social'>Обществознание</button_Soc>
+        <button_Spain id='spain'>Испанский язык</button_Spain>
+        <button_China id='china'>Китайский язык</button_China>
+        <button_Lit id='spain'>Литература</button_Lit>
+        <button_MatB id='math_b'>Математика (база)</button_MatB>
+        <button_Inf id='inf'>Информатика</button_Inf>
+    </lessonsEGE>
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let start = document.getElementById('start');
+        let EGE = document.getElementById('EGE');
+        let OGE = document.getElementById('OGE');
+
+        start.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+        });
+
+        EGE.addEventListener('click', () => {
+            document.getElementById('form').style.display = 'none';
+            document.getElementById('lessonsEGE').style.display = 'block';
+        });
+
+        order.addEventListener('click', () => {
+            tg.close();
+        });
+    </script>
+</body>
+</html>
