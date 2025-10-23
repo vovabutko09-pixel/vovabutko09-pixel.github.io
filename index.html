@@ -168,6 +168,11 @@
             transition: all 500ms ease;
             color: var(--tg-theme-button-color);
             background: var(--tg-theme-button-text-color);;
+
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            word-break: break-word;
         }
         button_Mat:hover{
             background: var(--tg-theme-secondary-bg-color);
@@ -191,7 +196,7 @@
         <h1>Выбор предмета</h1>
         <button_Rus id='russian'>Русский язык</button_Rus>
         <button_MatB id='math_b'>Математика</button_MatB>
-        <button_Mat id='math'>Математика (профиль)</button_Mat>
+        <button_Mat id='math'>Математика(профиль)</button_Mat>
     </lessonsEGE>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
@@ -216,6 +221,7 @@
     </script>
 </body>
 </html>
+
 
 
 
