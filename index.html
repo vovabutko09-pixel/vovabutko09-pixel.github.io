@@ -61,6 +61,40 @@
             background: var(--tg-theme-secondary-bg-color);
         }
 
+         button1{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            front-size: 20px;
+            front-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+
+        button1:hover{
+            background: var(--tg-theme-secondary-bg-color);
+        }
+        button2{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            front-size: 20px;
+            front-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+
+        button2:hover{
+            background: var(--tg-theme-secondary-bg-color);
+        } 
         #form {
             display: none;
             text-align: center;
@@ -76,8 +110,8 @@
     </div>
     <form>
         <h1>Выбор экзамена</h1>
-        <button id="EGE">ЕГЭ</button>
-        <button id="OGE">ОГЭ</button>
+        <button1 id="EGE">ЕГЭ</button1>
+        <button2 id="OGE">ОГЭ</button2>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
@@ -96,3 +130,4 @@
     </script>
 </body>
 </html>
+
