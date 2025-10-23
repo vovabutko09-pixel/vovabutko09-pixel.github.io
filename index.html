@@ -75,6 +75,11 @@
             background: var(--tg-theme-button-text-color);
         }
 
+        #form {
+            display: none;
+            text-align: center;
+        }
+
         button1:hover{
             background: var(--tg-theme-secondary-bg-color);
         }
@@ -95,10 +100,7 @@
         button2:hover{
             background: var(--tg-theme-secondary-bg-color);
         } 
-        #form {
-            display: none;
-            text-align: center;
-        }
+        
     </style>
 </head>
 <body>
@@ -117,19 +119,21 @@
     <script>
         let tg = window.Telegram.WebApp;
         let start = document.getElementById('start');
-        let OGE = document.getElementById('ОГЭ');
+        let EGE = document.getElementById('EGE');
+        let OGE = document.getElementById('OGE');
 
         start.addEventListener('click', () => {
             document.getElementById('main').style.display = 'none';
             document.getElementById('form').style.display = 'block';
-        })
+        });
 
         order.addEventListener('click', () => {
             tg.close();
-        })
+        });
     </script>
 </body>
 </html>
+
 
 
 
