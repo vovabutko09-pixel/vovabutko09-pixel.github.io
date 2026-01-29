@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" content="width=device-width, user-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Карманный репетитор🥸</title>
+    <link rel="stylesheet" href="mat-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../script-ege.js"></script>
+</head>
+
+<body>
+    <div class = 'up-box-container'>
+        <button class="back" onclick="history.back()">❰</button>
+        <img class="img" src="../../photo_2026-01-26_15-32-22-edited-free (carve.photos).png">
+    </div>
+
+    <div class="bottom-container">
+        <div class="button-wrapper">
+            <button class="prof" onclick="toggleNumbers(this)">
+                <div class="text-btn">ПРОФИЛЬ</div>
+            </button>
+            <div class="numbers-grid" id ='prof'>
+                <button class="num-btn" onclick="window.location.href='/EGE_BOT/main/EGE/math/prof/task-view.html?id=1'">1</button>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button class="baz" onclick="toggleNumbers(this)">
+                <div class="text-btn">БАЗА</div>
+            </button>
+            <div class="numbers-grid" id="baz">
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
